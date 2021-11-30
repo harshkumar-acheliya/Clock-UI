@@ -1,0 +1,103 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+
+}
+body{
+    
+    background-color: hsl(0deg 0% 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 720px;
+    background-color: #091921;
+}
+.clock{
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-image: url("clock.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 4px solid hsl(200deg 57% 8%);
+    border-radius: 16rem;
+    box-shadow: 0px -15px 15px rgb(255 255 255 / 5%), 
+                inset 0px -15px 15px rgb(255 255 254 / 5%), 
+                0px 15px 15px rgb(0 0 0 / 30%), 
+                inset 0px 15px 15px rgb(0 0 0 / 30%);
+
+
+
+
+}
+.clock,.hour,.min,.sec{
+    position: absolute;
+}
+.clock::before{
+    content: "";
+    background-color: hsl(0deg 0% 0%);;
+    width: 10px;
+    height: 10px;
+    border: 3px solid hsl(210deg 79% 46%);
+    border-radius: 10px;
+    z-index: 100;
+}
+.clock .hour,.hourhand{
+    width: 160px;
+    height: 138px;
+}
+.clock .min,.minhand{
+    width: 190px;
+    height: 214px;
+}
+.clock .sec,.sechand{
+    width: 230px;
+    height: 170px;
+}
+
+
+.hourhand,.minhand,.sechand{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.hourhand::before{
+    content: "";
+    background-color: hsl(0deg 0% 100%);
+    width: 8px;
+    height: 75px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 8;
+
+}
+.minhand::before{
+    content: "";
+    background-color: hsl(0deg 0% 100%);
+    width: 8px;
+    height: 115px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 9;
+}
+.sechand::before{
+    content: "";
+    background-color: hsl(210deg 79% 46%);
+    width: 5px;
+    height: 107px;
+    border-radius: 10px;
+    z-index: 10;
+    position: absolute;
+}
+
